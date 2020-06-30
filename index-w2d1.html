@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="demo"></p>
+<p id="d2"></p>
+<p id="words"></p>
+
+<script type="text/javascript">
+var numbers = [50, 50, 100];
+
+document.getElementById("demo").innerHTML = numbers.reduce(sum);
+
+function sum(total, num) {
+	  return total + num;
+	}
+//console.log("Expected output of sum() = " + sum(20, 10)));
+console.log(sum(10,40));
+
+var nums = [1,1,4];
+document.getElementById("d2").innerHTML = nums.reduce(multiply);
+
+function multiply(total, num) {
+	  return total * num;
+	}
+
+
+var words = ['ehab', 'a', 'cc'];
+var longestWord = words.sort(longs)[0];
+
+function longs(a, b) 
+{ return	b.length - a.length;}
+
+document.getElementById("words").innerHTML = longestWord;
+
+</script>
+</body>
+</html>
